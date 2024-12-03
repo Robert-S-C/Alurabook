@@ -1,0 +1,214 @@
+hr {
+    margin:0;
+    padding: 0;
+    background: var(--branco);
+}
+.rodapé {
+    background: var(--branco);
+    padding: 1em;
+}
+
+.rodapé__titulo {
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--azul);
+    
+}
+
+.rodapé__titulo-robert {
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 700;
+    border: 2px solid var(--laranja);
+    padding: 4px;
+    color: var(--laranja);
+    box-shadow: 2px 3px 0 #a5840066;
+    border-radius: 8px;
+    overflow:hidden;
+    margin-top: -6px;
+}
+
+.rodapé-robert {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.robert-link {
+    text-decoration: none;
+    color: var(--laranja-escuro);
+    position:relative;
+        
+}
+
+.robert-link::before {
+
+    content: "Meu Likedin";
+    color: var(--branco);
+    font-size: 16px;
+    border: 1px;
+    border-radius: 8px;
+    width: 215px;
+    height: 26px;
+    padding-top: 4.5px;
+    top: -132%;
+    left: -4.5%;
+    position: absolute;
+    background: #eea724;
+    text-align: center;
+    
+}
+
+.robert-link:hover::before {
+    animation: desloca 0.7s;
+    top:1%;
+    left:-4,5%;
+}
+
+@keyframes desloca {
+    0% {
+        top: -90%;
+        left: -4.5%;
+        
+    }
+    14.28% {
+        top: -70%;
+        left: -4.5%;
+    }
+    28.56% {
+        top:-40%;
+        left: -4.5%;
+    }
+    42.84% {
+        top:1%;
+        left: -4.5%;
+    }
+    57.12% {
+        top:-50%;
+        left: -4.5%;
+    }
+    71.4% {
+        top:-20%;
+        left: -4.5%;
+    }
+    100% {
+        top: 1%;
+        left: -4.5%;
+    }
+}
+
+.lista-rodapé {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .rodapé {
+        display: flex;
+        justify-content: space-around;
+
+    }
+    .rodapé__titulo {
+        font-size: 24px;
+        padding-bottom: 10.7em;
+    }
+
+    .rodapé__titulo-robert {
+        font-size: 28px;
+        border: 2px solid var(--laranja-escuro);
+        box-shadow: 4px 6px 0 #a5840066;
+        border-radius: 8px;
+        overflow:hidden;
+    }
+    .rodapé-robert {
+        display: block;
+    }
+
+    .robert-link{
+        text-decoration: none;
+        color: var(--laranja);
+    }
+
+    .robert-link::before {
+        content: "Meu Likedin";
+        font-size: 28px;
+        border: 1px;
+        width: 382px;
+        height: 33px;
+        top: -107%;
+        left: -11%;
+        border-radius: 8px;
+        background: #eea724;
+        text-align: center;
+        padding-top: 6px;
+    }
+
+    .robert-link:hover::before {
+        animation: desloca .3s;
+        top:1%;
+        left:-2%;
+    }
+    
+    @keyframes desloca {
+        0% {
+            top: -107%;
+            left: -11%;
+        }
+        35% {
+            top: -58%;
+            left: -7%;
+        }
+        65% {
+            top:-29%;
+            left: -3%;
+        }
+        100% {
+            top:1%;
+            left:-2%;
+        }
+    }
+
+    .lista-rodapé {
+        display: block;
+    }
+
+    .lista-rodapé__item {
+        display: flex;
+        align-items: center;
+        margin: 0.6em;
+        font-family: var(--fonte-principal);
+    }
+    
+    .lista-rodapé__link {
+        color: var(--cinza);
+        text-decoration: none;
+        margin-left: 0.6em;
+    }
+
+    .lista-rodapé__titulo {
+        font-family:var(--fonte-principal);
+        color: var(--cinza-claro);
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    @media screen and (min-width: 1728px) {
+        .lista-rodapé {
+            border-left: 1px solid var(--cinza-claro);
+            padding: 1em;
+        }
+
+        .rodapé__titulo {
+            padding-bottom: 12.6em;
+            font-size: 38px;
+        }
+
+        .rodapé {
+            padding: 3em 3em;
+        }
+
+        .lista-rodapé {
+            margin-right: 3em;
+        }
+    }
+}
